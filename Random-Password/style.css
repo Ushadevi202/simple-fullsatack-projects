@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(6, 54, 66);
+    margin: 0;
+    padding: 0;
+    
+}
+.container{
+    
+    width:40%;
+    min-width: none;
+    padding: 30px;
+    margin: 5% 50% 30% 33%;
+}
+.container h1{
+    font-size: 45px;
+    font-weight: 500;
+    font-family: serif;
+    color: white;
+}
+.container h1 span{
+    color: cyan;
+    border-bottom: 5px solid cyan;
+    box-shadow: 0 10px 10px grey;
+}
+.input{
+    background-color: white;
+    display: flex;
+    width: 70%;
+    border-radius: 5px;
+    padding: 17px;
+    
+
+}
+.input img{
+    width:30px ;
+   padding: 10px;
+   margin-left: 30%;
+   
+}
+.input input{
+    border: none;
+    outline: none;
+    font-size: 17px;
+   
+}
+button{
+    margin-top: 15px;
+    width: 40%;
+    border-radius: 5px;
+    background-color: cyan;
+    padding: 20px;
+    font-size: 15px;
+    box-shadow: 0 10px 15px gainsboro;
+}
