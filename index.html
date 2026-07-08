@@ -7,69 +7,74 @@
     <style>
         body {
             background-color: lavender;
-            margin: 0; /* Remove default margin */
-            font-family: Arial, sans-serif; /* Set font for body */
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Keeps footer at bottom if content is short */
         }  
         div {
-            border-style: solid;
+            /* FIXED: Use max-width and auto margins for perfect centering on all screens */
+            max-width: 400px;
+            width: 100%;
+            margin: 60px auto 0 auto;
+            
             border-radius: 20px;
             padding: 50px;
-            background: linear-gradient(135deg,rgba(59, 59, 240, 0.705),#4c085f);
-            margin: 60px 450px 0 450px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+            background: linear-gradient(135deg, rgba(59, 59, 240, 0.705), #4c085f);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+            box-sizing: border-box; /* Prevents padding from breaking layout */
         }
         h1 {
             color: white;
             text-align: center;
-            margin-bottom: 20px; /* Add space below heading */
-        }
-        h2 {
-            color: black;
-            text-align: center;
-            margin-bottom: 30px; /* Add space below subheading */
+            margin-bottom: 30px; 
         }
         ol {
-            list-style-type: none; /* Remove bullet points */
-            padding: 0; /* Remove padding */
+            list-style-type: none; 
+            padding: 0; 
+            margin: 0;
         }
         li {
-            margin: 10px auto; /* Space between list items and centered */
+            margin: 15px auto; 
             text-align: center;
             background-color: rgb(14, 13, 13);
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 150px;
-            height: 35px;
+            width: 180px; /* Slightly wider to prevent long text from spilling out */
+            height: 40px;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
         }
         a {
-            color: white; /* Link color */
-            text-decoration: none; /* Remove underline */
-            font-size: 18px; /* Font size for links */
-            transition: color 0.3s ease; /* Smooth color transition */
+            color: white; 
+            text-decoration: none; 
+            font-size: 18px; 
             display: block;
             width: 100%;
-            line-height: 35px;
+            line-height: 40px;
         }
-        a:hover {
-            color: rgb(17, 16, 17); /* Change color on hover */
+        /* FIXED: Changing background color on hover makes it feel like a real button */
+        li:hover {
+            background-color: #3b3bf0; 
         }
         footer {
             text-align: center;
-            margin-top: 400px;
+            margin-top: auto; /* Pushes footer neatly to the bottom */
+            padding: 20px 0;
             font-size: 17px;
-            color:black;
+            color: black;
         }
 
         /* Responsive Design */
-        @media (max-width: 800px) {
+        @media (max-width: 500px) {
             div {
-                margin: 20px; /* Adjust margin for smaller screens */
-                padding: 30px; /* Adjust padding for smaller screens */
+                margin: 20px; 
+                padding: 30px; 
             }
-            h1, h2 {
-                font-size: 1.5em; /* Reduce font size for smaller screens */
+            h1 {
+                font-size: 1.8em; 
             }
         }
     </style>
@@ -84,8 +89,6 @@
             <li><a href="booksky/index.html">BookSky</a></li>
             <li><a href="image-gallery/index.html">Image Gallery</a></li>
             <li><a href="txt-speech/index.html">Text into Speech</a></li>
-            
-            
         </ol>
     </div>
     <footer>
